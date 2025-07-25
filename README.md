@@ -1,2 +1,2 @@
 ## Calculator App
-A basic javascript calculator app.  Usage based on terms of use.
+A basic javascript calculator app.  Helps you do math using python.
